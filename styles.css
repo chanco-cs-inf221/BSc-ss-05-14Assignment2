@@ -1,0 +1,91 @@
+@charset "utf-8";
+body {
+      background-color: #8FD7ED;
+      font-family: sans-serif;
+	  padding: 20px;
+}
+p {word-wrap: normal;
+	flex-wrap: wrap;
+}
+h1 {
+	  align-content: center;
+	  text-align: center;
+      font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+      font-weight: normal;
+      text-transform: uppercase;
+      border-bottom: 1px solid #57b1dc;
+      margin-top: 20px;
+	  font-size: 40px;
+	  color: #63818C;
+}
+
+h2 {
+      color: #63818C;
+      font-size: 30px;
+	  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+h3{ color: #63818C;
+      font-size: 20px;
+	  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+* {
+     box-sizing: border-box;
+}
+.main {
+  margin:auto;
+	table-layout: auto;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.3333333333%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+fieldset{
+		border: 1px solid #999;
+	    border-radius: 8px;
+	    box-shadow: 0 0 10px #999;
+	}
+
+form {
+	border-width: medium;
+}
+legend {background: #fff}
+
+	

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>Runguzwayo Soko || Assignemnt 2</title>
+	
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <script type="text/javascript">
+		
+	function save() {
+		document.getElementById("projectForm");
+		var projectName = document.forms[0].elements [0].value
+		var projectDate = document.forms[0].elements [1].value;
+		var projectDescription = document.forms[0].elements [2].value;
+		
+		localStorage.setItem("projectName", projectName);
+		localStorage.setItem("date", projectDate);
+		localStorage.setItem("projectDescription", projectDescription);
+		
+	}
+	function load() {
+		var x = document.getElementById("projectForm");
+		var txt = ""
+		var i
+		for (i=0; i < x.length; i++){
+			txt = txt + x.elements[i].value + "<br> <br> <br> <br>";
+		}
+		document.getElementById("List").innerHTML = txt;
+		var project_name = localStorage.getItem('projectName');
+	var date_value = localStorage.getItem('date');
+		var project_description = localStorage.getItem('projectDescription');
+		
+//		if (project_name; date_value ; project_description){
+		
+	 document.getElementById('projectName').value = project_name;
+			document.getElementById('date').value = date_value;
+			document.getElementById('projectDescription').value = project_description;
+//			}
+		document.write(project_name+ "  " +date_value+ "  "+project_description);
+	} 
+	</script>
+
+ </head>
+<body>
+<header >
+<div class="main" >
+<h1 align="center"><img src="images/IMG-20190307-WA0016.jpg" style="float:left"; width="115" height="200" align="top">          
+    <h1>Runguzwayo Soko</h1>
+   <h3>
+   <p>&nbsp;&nbsp; Registration Number: BSc/ss/05/14</p>
+   <p>&nbsp;&nbsp; INF221(Web Design and Web Development)</p>
+   <p>&nbsp;&nbsp; Assignment 2</p>
+  </h3>
+   </h1>
+<h3 align="right" >2nd Year Bachelor Of Science student at Chancellor College.</h3>
+
+<h3 align="right"><b><a href="https://github.com/runguzwayo" title="github account" target="_blank">
+  Github</a> </b>   <b><a href="https://www.facebook.com/runguzwayo.soko" title="Facebook_Link" target="_blank">Facebook</a></b>     
+   <b><a href="mailto:bsc-ss-05-14@cc.ac.mw">Email Address</a></b> </h3>
+  </div>
+</header>
+
+ 
+  <div class="content">
+    <h2 align="center">PROJECTS</h2>
+    
+	</div>
+   
+   
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="images/webdesign.jpg" alt="Mountains" style="width:100%">
+      <h3>Web Design &amp; Development</h3>
+      <p>I produce high quality responsive websites that follow current HTML5 semantics and use front-end markup languages and scripting languages such as CSS3 and Javascript. </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="images/appDev.jpg" alt="Lights" style="width:100%">
+      <h3>Application Development</h3>
+      <p>I develop simple applications using Java and C++.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="images/graphic-design.png" alt="Nature" style="width:100%">
+      <h3>Graphic Design</h3>
+      <p>I provide custom graphic designs using tools such as Adobe Photoshop, Adobe Illustrator, Adobe InDesign, CorelDRAW and SmartDraw </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="content">
+ 
+  <h3>Other Projects</h3>
+  <p>Please enter more projects in the form below</p> 
+  <br> 
+
+</div>
+  <div class="content">
+  <fieldset>
+<form id="projectForm" >
+
+<legend>Insert Project Details</legend>
+<p>
+    Project Name: <input type="text" value="" name="projectName" ><br>
+    Project Date: <input type="date" value="" name="projectDate" /><br>
+    Project Description : <input type="text" value="" name="projectDescription"> <br>
+    <input type="button" id="button" value="Save"  onClick="save()"/>
+    <input type="button" id="button2" value="Load List of Projects" onClick="load()" />
+</p>
+
+</form>
+</fieldset>
+
+<br>
+<br>
+<br>
+<p id="List" align="left"></p>
+<br>
+<br>
+ </div>
+      
+</body>
+</html>
